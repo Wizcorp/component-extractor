@@ -1,0 +1,13 @@
+{
+	"sourcePaths": [
+		"www"
+	],
+	"excludePaths": [
+		"bin",
+		"lib"
+	],
+	"externalDependencies": {
+		"async":        { "path": "caolan/async", "components": "*" },
+		"inherit":      { "path": "component/inherit", "components": "*" }
+	}
+}
