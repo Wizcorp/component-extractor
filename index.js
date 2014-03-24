@@ -66,8 +66,8 @@ function getComponentList(directoryPath, directoryName) {
 		componentPath = componentPath.join('/');
 
 		if (componentList[directoryName]) {
-			console.warn('[WARN] possible component name conflict: ' + directoryName + '  ' + componentList[directoryName]);
-			console.warn('[WARN] possible component name conflict: ' + directoryName + '  ' + componentPath);
+			console.log('[WARN] possible component name conflict: ' + directoryName + '  ' + componentList[directoryName]);
+			console.log('[WARN] possible component name conflict: ' + directoryName + '  ' + componentPath);
 		}
 
 		componentList[directoryName] = componentPath;
@@ -193,7 +193,7 @@ function createComponentJson(componentName, dir, fileName, stylesList) {
 
 	// write component.json file in directory
 	var jsonPath = path.join(rootDir, dir, 'component.json');
-	console.log("writting : " + jsonPath);
+	// console.log("writting : " + jsonPath);
 	fs.writeFileSync(jsonPath, JSON.stringify(componentJson, null, '\t'), { encoding: 'utf8' });
 }
 
