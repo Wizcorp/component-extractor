@@ -37,6 +37,7 @@ var rootDir = process.cwd();
  *                                 if it is a component folder)
  */
 function getComponentList(directoryPath, directoryName) {
+	var i, len;
 	// skip 'node_modules' directories
 	if (directoryName === 'node_modules') return;
 	// skip hidden directories
@@ -73,7 +74,7 @@ function getComponentList(directoryPath, directoryName) {
 
 		// if component is the subdir to parse, add it to a list of component to generate
 		var isInListToExtract = false;
-		for (var i = 0; i < sourcePathsLength; i++) {
+		for (i = 0; i < sourcePathsLength; i++) {
 			if (directoryPath.substring(0, sourcePaths[i].length) === sourcePaths[i]) {
 				isInListToExtract = true;
 				break;
@@ -98,7 +99,7 @@ function getComponentList(directoryPath, directoryName) {
 	}
 	
 	// recurse on subdirectories
-	for (var i = 0, len = subdirectoriesList.length; i < len; i++) {
+	for (i = 0, len = subdirectoriesList.length; i < len; i++) {
 		var id = subdirectoriesList[i];
 		getComponentList(path.join(directoryPath, id), id);
 	}
@@ -159,7 +160,7 @@ function createComponentJson(componentName, dir, fileName, stylesList) {
 
 	// parse javascript to find require
 	var fileContent = fs.readFileSync(filePath, { encoding: 'utf8' });
-	var splited = fileContent.split(/(require\('[A-Za-z0-9\$]*'\))/);
+	var splited = fileContent.split(/(require\('[A-Za-z0-9\_\-\.\$]*'\))/);
 	for (var i = 0, len = splited.length; i < len; i++) {
 		var s = splited[i];
 		if (s.substring(0,9) === 'require(\'') {
@@ -217,7 +218,7 @@ function extractComponentJson(componentsToParse) {
 
 
 console.log('Getting component list...');
-getComponentList('');
+getComponentList('', '');
 console.log('Extracting component.json files...');
 extractComponentJson(componentsToParse);
 console.log('Done.');
