@@ -15,3 +15,9 @@ statements in the `index.js` file in component's directory.
 
 If a require is not found, component-extractor will try to resolve dependency by searching in the 
 `externalDependencies` parameter defined in `config.json`.
+
+
+TODO
+----
+
+* exclude `require` that are commented out in javascript code
