@@ -11,7 +11,7 @@ var fs      = require('fs');
 
 // load config.json
 var config = fs.readFileSync(path.join(__dirname, 'config.json'), { encoding: 'utf8' });
-if (!config) return console.warn('[ERROR] No config.json file.');
+if (!config) throw new Error('[ERROR] No config.json file.');
 config = JSON.parse(config);
 
 var sourcePaths = config.sourcePaths;
