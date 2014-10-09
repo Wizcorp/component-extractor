@@ -1,13 +1,27 @@
 {
-    "name": "component-extractor",
-    "version": "0.0.0",
-    "author": {
-        "name": "Cedric Stoquer",
-        "email": "cstoquer@wizcorp.jp"
-      },
-    "scripts": {
-        "start": "node app.js"
-    },
-    "dependencies": {
-    }
+	"name": "component-extractor",
+	"description": "Generate component.json files of your project",
+	"version": "0.0.0",
+	"private": false,
+	"author": {
+		"name": "Cedric Stoquer",
+		"email": "cstoquer@wizcorp.jp"
+	},
+	"bin": {
+		"component-extractor": "./bin/component-extractor"
+	},
+	"main": "./lib/component-extractor.js",
+	"dependencies": {
+		"commander": "2.2.0"
+	},
+	"repository": {
+		"type": "git",
+		"url": "https://github.com/Wizcorp/component-extractor.git"
+	},
+	"licenses": [
+		{
+			"type": "MIT",
+			"url": "https://github.com/Wizcorp/component-hint/blob/master/LICENSE"
+		}
+	]
 }

@@ -1,0 +1,12 @@
+#!/usr/bin/env node
+
+var extractor = require('../lib/component-extractor.js');
+
+extractor.execute(process.argv, function (error) {
+	if (error) {
+		console.log(error);
+		process.exit(1);
+	}
+
+	process.exit(0);
+});
