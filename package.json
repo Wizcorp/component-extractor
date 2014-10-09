@@ -1,7 +1,7 @@
 {
 	"name": "component-extractor",
 	"description": "Generate component.json files of your project",
-	"version": "0.0.0",
+	"version": "0.1.0",
 	"private": false,
 	"author": {
 		"name": "Cedric Stoquer",

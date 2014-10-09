@@ -1,7 +1,7 @@
 component-extractor
 ===================
 
-This tool will generate component.json files of your project.
+This tool will generate `component.json` files of your project.
 
 Process will browse current directory to search all components folders.
 Is considered a component folder, a folder containing an 'index.js' file.
