@@ -23,10 +23,27 @@ You define in the configuration file which directories are scanned and wich dire
 
 ### Configuration file
 
-In the configuration file, you should define 3 lists:
-* `sourcePaths` a list of directories where `component.json` files have to be generated.
-* `excludePaths` a list of directories to exclude from scanning.
-* `externalDependencies` a list of external dependecies with their path and version.
+The configuration file is a json file where you should define 3 lists of path:
+* `sourcePaths` is a list of directories where `component.json` files have to be generated.
+* `excludePaths` is a list of directories to exclude from scanning.
+* `externalDependencies` is a list of external dependecies with their path and version.
+
+For instance
+```javascript
+{
+	"sourcePaths": [
+		"www"
+	],
+	"excludePaths": [
+		"bin",
+		"lib"
+	],
+	"externalDependencies": {
+		"async":   { "path": "caolan/async", "components": "0.9.0" },
+		"inherit": { "path": "component/inherit", "components": "*" }
+	}
+}
+```
 
 
 ## TODO
