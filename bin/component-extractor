@@ -4,7 +4,7 @@ var extractor = require('../lib/component-extractor.js');
 
 extractor.execute(process.argv, function (error) {
 	if (error) {
-		console.log(error);
+		console.error(error);
 		process.exit(1);
 	}
 
