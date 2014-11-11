@@ -1,8 +1,8 @@
 #!/usr/bin/env node
 
-var extractor = require('../lib/component-extractor.js');
+var cli = require('../lib/cli.js');
 
-extractor.execute(process.argv, function (error) {
+cli.execute(process.argv, function (error) {
 	if (error) {
 		console.error(error);
 		process.exit(1);
