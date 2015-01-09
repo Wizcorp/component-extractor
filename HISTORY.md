@@ -1,6 +1,6 @@
 # Release history
 
-## vNEXT Script sub-folder
+## 0.1.2 Script sub-folder
 Allowing scripts of a component to live in sub-folders.
 It will throw if a script is required outside the roo.
 
